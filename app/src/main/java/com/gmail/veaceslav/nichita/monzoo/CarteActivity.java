@@ -26,22 +26,22 @@ public class CarteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(new CarteView(this));
         Log.i("CreateActivity", "onCreate() fini");
-        Toast.makeText(this,"Bonjour à vous!",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Bonjour à vous!", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         //return super.onTouchEvent(event);
-        //la intenstion
-        // pour aller vers aquarium
-        Intent i = new Intent(this, AquariumActivity.class);
-        startActivity(i);
-
+        if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
+            //la intenstion
+            // pour aller vers aquarium
+            Intent i = new Intent(this, AquariumActivity.class);
+            startActivity(i);
+        }
         return true;//événement utilisé
-
     }
 
-    public class CarteView extends View{
+    public class CarteView extends View {
 
         public CarteView(Context context) {
             super(context);
@@ -53,11 +53,11 @@ public class CarteActivity extends Activity {
             canvas.drawColor(GREEN);
             Paint paint = new Paint();
             paint.setColor(RED);
-            Bitmap b = BitmapFactory.decodeResource(getResources(),R.drawable.carte);
-            canvas.drawBitmap(b,0,0,null);
-            canvas.drawLine(0,200,600,200,paint);
-            Bitmap c = BitmapFactory.decodeResource(getResources(),R.drawable.zoo);
-            canvas.drawBitmap(c,400,0,null);
+            Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.carte);
+            canvas.drawBitmap(b, 0, 0, null);
+            canvas.drawLine(0, 200, 600, 200, paint);
+            Bitmap c = BitmapFactory.decodeResource(getResources(), R.drawable.zoo);
+            canvas.drawBitmap(c, 400, 0, null);
 
         }
     }

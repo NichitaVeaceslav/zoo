@@ -6,12 +6,14 @@ import static android.graphics.Color.RED;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -27,11 +29,27 @@ public class AquariumActivity extends Activity {
         Log.i("CreateActivity", "onCreate()Aquarium fini");
     }
 
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        //return super.onTouchEvent(event);
+        if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
+            //la intenstion
+            // pour aller vers aquarium
+            Intent i = new Intent(this, PopcornActivity.class);
+            startActivity(i);
+        }
+        return true;//événement utilisé
+    }
+
+
     public class AquariumView extends View {
 
         public AquariumView(Context context) {
             super(context);
         }
+
+
 
         @Override
         protected void onDraw(Canvas canvas) {
