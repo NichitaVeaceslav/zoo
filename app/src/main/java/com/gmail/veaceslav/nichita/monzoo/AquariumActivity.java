@@ -35,8 +35,10 @@ public class AquariumActivity extends Activity {
         //return super.onTouchEvent(event);
         if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
             //la intenstion
-            // pour aller vers aquarium
+            // pour aller vers PopCOrn
             Intent i = new Intent(this, PopcornActivity.class);
+            //comportment special
+            i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(i);
         }
         return true;//événement utilisé

@@ -4,11 +4,13 @@ import static android.graphics.Color.BLUE;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -21,6 +23,17 @@ public class PopcornActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(new PopcornActivity.PopcornView(this));
         Log.i("CreateActivity", "onCreate()Aquarium fini");
+    }
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        //return super.onTouchEvent(event);
+        if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
+            //la intenstion
+            // pour aller vers Carte
+            Intent i = new Intent(this, CarteActivity.class);
+            startActivity(i);
+        }
+        return true;//événement utilisé
     }
 
     public class PopcornView extends View {
