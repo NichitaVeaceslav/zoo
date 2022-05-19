@@ -29,18 +29,19 @@ public class PopcornActivity extends Activity {
         Intent i = getIntent();
         //0 la valeur par default
         long tempAquarium = i.getLongExtra("tempsAquarium", 0);
-        if(tempAquarium > 3000){
+        if (tempAquarium > 3000) {
             Toast.makeText(this,
-                    "Pas de popcorn pour les poissons",
+                    "Pas de popcorn pour les poissons(" + tempAquarium / 1000 + "seconds)",
                     Toast.LENGTH_LONG).show();
         }
     }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         //return super.onTouchEvent(event);
         if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
 
-            if(event.getX()<400){
+            if (event.getX() < 400) {
                 //la intenstion
                 // pour aller vers Carte
                 Intent i = new Intent(this, CarteActivity.class);
@@ -49,13 +50,13 @@ public class PopcornActivity extends Activity {
                 //i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
-            }else {//appuyer à droite
+            } else {//appuyer à droite
                 String infoPopcorn = "https://www.allrecipes.com/recipes/16051/appetizers-and-snacks/snacks/popcorn/";
                 Uri url = Uri.parse(infoPopcorn);//donnée
                 Intent i = new Intent(Intent.ACTION_VIEW, url);
-                try{
+                try {
                     startActivity(i);
-                }catch (ActivityNotFoundException ex){
+                } catch (ActivityNotFoundException ex) {
                     Log.e("PopcornActivity", "Pas de bavugateur web");
                 }
 
@@ -76,8 +77,8 @@ public class PopcornActivity extends Activity {
             super.onDraw(canvas);
             canvas.drawColor(BLUE);
 
-            Bitmap b = BitmapFactory.decodeResource(getResources(),R.drawable.popcorn);
-            canvas.drawBitmap(b,0,0,null);
+            Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.popcorn);
+            canvas.drawBitmap(b, 0, 0, null);
 
 
         }
