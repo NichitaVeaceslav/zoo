@@ -38,7 +38,9 @@ public class AquariumActivity extends Activity {
             // pour aller vers PopCOrn
             Intent i = new Intent(this, PopcornActivity.class);
             //comportment special
-            i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            //i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            //i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
         }
         return true;//événement utilisé
