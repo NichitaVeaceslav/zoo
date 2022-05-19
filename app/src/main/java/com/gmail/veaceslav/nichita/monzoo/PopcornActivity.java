@@ -31,6 +31,10 @@ public class PopcornActivity extends Activity {
             //la intenstion
             // pour aller vers Carte
             Intent i = new Intent(this, CarteActivity.class);
+            //comportment special
+            //i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            //i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
         }
         return true;//événement utilisé
