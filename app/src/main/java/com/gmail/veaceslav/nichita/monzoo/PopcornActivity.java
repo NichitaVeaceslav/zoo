@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -28,14 +29,23 @@ public class PopcornActivity extends Activity {
     public boolean onTouchEvent(MotionEvent event) {
         //return super.onTouchEvent(event);
         if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
-            //la intenstion
-            // pour aller vers Carte
-            Intent i = new Intent(this, CarteActivity.class);
-            //comportment special
-            //i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-            //i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(i);
+
+            if(event.getX()<400){
+                //la intenstion
+                // pour aller vers Carte
+                Intent i = new Intent(this, CarteActivity.class);
+                //comportment special
+                //i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                //i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+            }else {//appuyer à droite
+                String infoPopcorn = "https://www.allrecipes.com/recipes/16051/appetizers-and-snacks/snacks/popcorn/";
+                Uri url = Uri.parse(infoPopcorn);//donnée
+                Intent i = new Intent(Intent.ACTION_VIEW, url);
+                startActivity(i);
+            }
+
         }
         return true;//événement utilisé
     }
