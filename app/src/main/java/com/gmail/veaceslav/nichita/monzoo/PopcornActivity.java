@@ -3,6 +3,7 @@ package com.gmail.veaceslav.nichita.monzoo;
 import static android.graphics.Color.BLUE;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -43,7 +44,12 @@ public class PopcornActivity extends Activity {
                 String infoPopcorn = "https://www.allrecipes.com/recipes/16051/appetizers-and-snacks/snacks/popcorn/";
                 Uri url = Uri.parse(infoPopcorn);//donnée
                 Intent i = new Intent(Intent.ACTION_VIEW, url);
-                startActivity(i);
+                try{
+                    startActivity(i);
+                }catch (ActivityNotFoundException ex){
+                    Log.e("PopcornActivity", "Pas de bavugateur web");
+                }
+
             }
 
         }
