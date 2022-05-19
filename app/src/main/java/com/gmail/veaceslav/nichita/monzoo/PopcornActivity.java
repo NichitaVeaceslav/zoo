@@ -19,7 +19,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 public class PopcornActivity extends Activity {
-
+    private long debut;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +34,18 @@ public class PopcornActivity extends Activity {
                     "Pas de popcorn pour les poissons(" + tempAquarium / 1000 + "seconds)",
                     Toast.LENGTH_LONG).show();
         }
+        debut = System.currentTimeMillis();
+    }
+
+    @Override
+    public void onBackPressed() {
+        long fin = System.currentTimeMillis(); // millisecondes depuis le 1/1/1970
+        long tempPasse = fin - debut;
+        Intent i = new Intent();
+        i.putExtra("tempsPopcorn", tempPasse);
+        setResult(0, i);
+        super.onBackPressed();//fermeture de l'activite popcorn
+
     }
 
     @Override

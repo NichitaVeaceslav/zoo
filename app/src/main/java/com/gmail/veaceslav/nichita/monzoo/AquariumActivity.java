@@ -43,24 +43,25 @@ public class AquariumActivity extends Activity {
             long tempPasse = v2 - debut;
             Log.i("AquariumActivity", "temps passé :" + tempPasse+"ms");
             i.putExtra("tempsAquarium", tempPasse);
-            startActivity(i);
+            startActivityForResult(i,0);
         }
         return true;//événement utilisé
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(0, 0, data);
+        Log.i("AquariumActivity", "Result :" +data.getLongExtra("tempsPopcorn",0)+"ms");
+    }
 
     public class AquariumView extends View {
-
         public AquariumView(Context context) {
             super(context);
         }
-
-
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
             canvas.drawColor(BLUE);
-
             Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.aquarium);
             canvas.drawBitmap(b, 0, 0, null);
 
