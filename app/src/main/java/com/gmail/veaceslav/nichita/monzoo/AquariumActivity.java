@@ -42,9 +42,9 @@ public class AquariumActivity extends Activity {
             long v2 = System.currentTimeMillis(); // millisecondes depuis le 1/1/1970
             //long tempPasse = (long)System.nanoTime();
             long tempPasse = v2 - debut;
-            Log.i("AquariumActivity", "temps passé :" + tempPasse+"ms");
+            Log.i("AquariumActivity", "temps passé :" + tempPasse + "ms");
             i.putExtra("tempsAquarium", tempPasse);
-            startActivityForResult(i,0);
+            startActivityForResult(i, 0);
         }
         return true;//événement utilisé
     }
@@ -52,13 +52,14 @@ public class AquariumActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(0, 0, data);
-        Log.i("AquariumActivity", "Result :" +data.getLongExtra(TEMPS_AQUARIUM,0)+"ms");
+        Log.i("AquariumActivity", "Result :" + data.getLongExtra(TEMPS_AQUARIUM, 0) + "ms");
     }
 
     public class AquariumView extends View {
         public AquariumView(Context context) {
             super(context);
         }
+
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);

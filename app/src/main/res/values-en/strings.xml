@@ -1,0 +1,5 @@
+<resources>
+    <string name="carte_titre" >Zoo map</string>
+    <string name="aquarium_titre" >Aquarium map</string>
+    <string name="popcorn_titre" >Popcorn</string>
+</resources>
