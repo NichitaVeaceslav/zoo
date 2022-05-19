@@ -21,6 +21,7 @@ import androidx.annotation.Nullable;
 public class PopcornActivity extends Activity {
     private long debut;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,7 @@ public class PopcornActivity extends Activity {
         Log.i("CreateActivity", "onCreate()Aquarium fini");
         Intent i = getIntent();
         //0 la valeur par default
-        long tempAquarium = i.getLongExtra("tempsAquarium", 0);
+        long tempAquarium = i.getLongExtra( AquariumActivity.TEMPS_AQUARIUM, 0);
         if (tempAquarium > 3000) {
             Toast.makeText(this,
                     "Pas de popcorn pour les poissons(" + tempAquarium / 1000 + "seconds)",

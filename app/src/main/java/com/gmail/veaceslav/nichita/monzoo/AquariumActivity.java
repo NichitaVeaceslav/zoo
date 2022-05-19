@@ -21,6 +21,7 @@ import androidx.annotation.Nullable;
 
 public class AquariumActivity extends Activity {
     private long debut;
+    public static final String TEMPS_AQUARIUM = "tempsAquarium";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,7 +52,7 @@ public class AquariumActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(0, 0, data);
-        Log.i("AquariumActivity", "Result :" +data.getLongExtra("tempsPopcorn",0)+"ms");
+        Log.i("AquariumActivity", "Result :" +data.getLongExtra(TEMPS_AQUARIUM,0)+"ms");
     }
 
     public class AquariumView extends View {
