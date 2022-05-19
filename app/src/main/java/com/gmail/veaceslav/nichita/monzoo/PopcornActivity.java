@@ -1,6 +1,7 @@
 package com.gmail.veaceslav.nichita.monzoo;
 
 import static android.graphics.Color.BLUE;
+import static android.graphics.Color.RED;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -88,7 +89,7 @@ public class PopcornActivity extends Activity {
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
-            canvas.drawColor(BLUE);
+            canvas.drawColor(RED);
 
             Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.popcorn);
             canvas.drawBitmap(b, 0, 0, null);
