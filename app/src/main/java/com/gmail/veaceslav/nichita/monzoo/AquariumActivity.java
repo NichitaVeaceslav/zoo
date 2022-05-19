@@ -20,13 +20,14 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 public class AquariumActivity extends Activity {
-
+    private long debut;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new AquariumActivity.AquariumView(this));
         Log.i("CreateActivity", "onCreate()Aquarium fini");
+        debut = System.currentTimeMillis(); // millisecondes depuis le 1/1/1970
     }
 
 
@@ -37,7 +38,11 @@ public class AquariumActivity extends Activity {
             //la intenstion
             // pour aller vers PopCOrn
             Intent i = new Intent(this, PopcornActivity.class);
-
+            long v2 = System.currentTimeMillis(); // millisecondes depuis le 1/1/1970
+            //long tempPasse = (long)System.nanoTime();
+            long tempPasse = v2 - debut;
+            Log.i("AquariumActivity", "temps passé :" + tempPasse+"ms");
+            i.putExtra("tempsAquarium", tempPasse);
             startActivity(i);
         }
         return true;//événement utilisé
@@ -51,14 +56,13 @@ public class AquariumActivity extends Activity {
         }
 
 
-
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
             canvas.drawColor(BLUE);
 
-            Bitmap b = BitmapFactory.decodeResource(getResources(),R.drawable.aquarium);
-            canvas.drawBitmap(b,0,0,null);
+            Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.aquarium);
+            canvas.drawBitmap(b, 0, 0, null);
 
 
         }

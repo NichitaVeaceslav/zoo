@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -25,6 +26,14 @@ public class PopcornActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(new PopcornActivity.PopcornView(this));
         Log.i("CreateActivity", "onCreate()Aquarium fini");
+        Intent i = getIntent();
+        //0 la valeur par default
+        long tempAquarium = i.getLongExtra("tempsAquarium", 0);
+        if(tempAquarium > 3000){
+            Toast.makeText(this,
+                    "Pas de popcorn pour les poissons",
+                    Toast.LENGTH_LONG).show();
+        }
     }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
