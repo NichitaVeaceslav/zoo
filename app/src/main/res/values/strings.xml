@@ -2,6 +2,7 @@
     <string name="app_name" translatable="false">MonZoo</string>
     <string name="app_banner" translatable="false">Banner</string>
     <string name="carte_titre" >Carte du Zoo</string>
+    <string name="carte_bonjour" >Bonjour!</string>
     <string name="aquarium_titre" >Carte de l\'Aquarium</string>
     <string name="popcorn_titre" >Popcorn</string>
 </resources>

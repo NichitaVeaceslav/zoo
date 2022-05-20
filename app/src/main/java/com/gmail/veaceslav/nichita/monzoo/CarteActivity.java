@@ -2,6 +2,7 @@ package com.gmail.veaceslav.nichita.monzoo;
 
 import static android.graphics.Color.*;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Notification;
 import android.content.Context;
@@ -21,12 +22,13 @@ import androidx.annotation.Nullable;
 
 public class CarteActivity extends Activity {
 
+    @SuppressLint("StringFormatInvalid")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new CarteView(this));
         Log.i("CreateActivity", "onCreate() fini");
-        Toast.makeText(this, "Bonjour à vous!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getString(R.string.carte_bonjour), Toast.LENGTH_LONG).show();
     }
 
     @Override
