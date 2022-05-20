@@ -3,6 +3,7 @@ package com.gmail.veaceslav.nichita.monzoo;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
@@ -34,6 +35,10 @@ public class AccueilActivity extends Activity {
                 tout += ligne + "\n";
             Log.i("AccueilActivity", "Nouvelles : " +tout);
             is.close();
+
+            TextView tvNouvelles = findViewById((R.id.accueil_nouvelles));
+            tvNouvelles.setText(tout);
+
         } catch (IOException ex) {
             Log.e("AccueilActivity", "Probleme d'ouvertrure de fichier nouvelle.txt", ex);
         }
