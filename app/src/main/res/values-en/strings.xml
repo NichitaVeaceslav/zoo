@@ -3,5 +3,14 @@
     <string name="carte_bonjour" >Hello!</string>
     <string name="aquarium_titre" >Aquarium map</string>
     <string name="popcorn_titre" >Popcorn</string>
-    <string name="popcorn_message" >"No popcorn for fish(%1d secondes)"</string>
+    <string name="popcorn_message" >"No popcorn for  %3$s (%1$d %2$s)"</string>
+    <string-array name="poissons">
+        <item>salmons</item>
+        <item>doradas</item>
+        <item>barracudas</item>
+    </string-array>
+    <plurals name="popcorn_second">
+        <item quantity="one">second</item>
+        <item quantity="other">seconds</item>
+    </plurals>
 </resources>

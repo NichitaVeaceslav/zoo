@@ -3,6 +3,7 @@ package com.gmail.veaceslav.nichita.monzoo;
 import static android.graphics.Color.BLUE;
 import static android.graphics.Color.RED;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -23,20 +24,29 @@ public class PopcornActivity extends Activity {
     private long debut;
 
 
+    @SuppressLint("StringFormatMatches")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new PopcornActivity.PopcornView(this));
         Log.i("CreateActivity", "onCreate()Aquarium fini");
         Intent i = getIntent();
+
+        double r =  (Math.random() * 10) / 3;// 1 resuslta de 3 possibles
         //0 la valeur par default
         long tempAquarium = i.getLongExtra( AquariumActivity.TEMPS_AQUARIUM, 0);
-        if (tempAquarium > 3000) {
+        //if (tempAquarium > 3000) { Test 3 secondes
+String[] poissons = getResources().getStringArray(R.array.poissons);
+        String secondes = getResources().getQuantityString(R.plurals.popcorn_second, (int) (tempAquarium/100));
+        if (tempAquarium > 100) {
             Toast.makeText(this,
                     //"Pas de popcorn pour les poissons(" + tempAquarium/1000 + "secondes)",
-                    getString(R.string.popcorn_message,tempAquarium/1000),
+                    getString(R.string.popcorn_message,tempAquarium/1000,
+                            secondes, poissons[(int) r]),
                     Toast.LENGTH_LONG).show();
+
         }
+
         debut = System.currentTimeMillis();
     }
 

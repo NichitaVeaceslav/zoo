@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="carte_titre" >Harta Zoo</string>
+    <string name="carte_bonjour" >Salut!</string>
+    <string name="aquarium_titre" >Harta Aquariumului </string>
+    <string name="popcorn_titre" >Popcorn</string>
+    <string name="popcorn_message" >"Fara popcorn pentru  %3$s (%1$d %2$s)"</string>
+    <string-array name="poissons">
+        <item>somon</item>
+        <item>dorada</item>
+        <item>barracuda</item>
+    </string-array>
+    <plurals name="popcorn_second" tools:ignore="MissingQuantity">
+        <item quantity="one">secunda</item>
+        <item quantity="other">secunde</item>
+    </plurals>
+</resources>
