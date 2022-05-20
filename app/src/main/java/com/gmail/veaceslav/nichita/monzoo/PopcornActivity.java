@@ -33,7 +33,8 @@ public class PopcornActivity extends Activity {
         long tempAquarium = i.getLongExtra( AquariumActivity.TEMPS_AQUARIUM, 0);
         if (tempAquarium > 3000) {
             Toast.makeText(this,
-                    "Pas de popcorn pour les poissons(" + tempAquarium / 1000 + "seconds)",
+                    //"Pas de popcorn pour les poissons(" + tempAquarium/1000 + "secondes)",
+                    getString(R.string.popcorn_message,tempAquarium/1000),
                     Toast.LENGTH_LONG).show();
         }
         debut = System.currentTimeMillis();

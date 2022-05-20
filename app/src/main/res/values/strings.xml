@@ -5,4 +5,6 @@
     <string name="carte_bonjour" >Bonjour!</string>
     <string name="aquarium_titre" >Carte de l\'Aquarium</string>
     <string name="popcorn_titre" >Popcorn</string>
+    <string name="popcorn_message" >"Pas de popcorn pour les poissons(%1d secondes)"</string>
+
 </resources>
