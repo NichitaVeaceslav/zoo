@@ -7,7 +7,6 @@
     <string-array name="poissons">
         <item>salmons</item>
         <item>doradas</item>
-        <item>barracudas</item>
     </string-array>
     <plurals name="popcorn_second">
         <item quantity="one">second</item>

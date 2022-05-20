@@ -6,7 +6,6 @@
     <string name="popcorn_message" >"Fara popcorn pentru  %3$s (%1$d %2$s)"</string>
     <string-array name="poissons">
         <item>somon</item>
-        <item>dorada</item>
         <item>barracuda</item>
     </string-array>
     <plurals name="popcorn_second" tools:ignore="MissingQuantity">
