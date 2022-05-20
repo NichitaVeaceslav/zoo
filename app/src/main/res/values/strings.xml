@@ -16,5 +16,12 @@
         <item quantity="one">seconde</item>
         <item quantity="other">secondes</item>
     </plurals>
-
+    <string name="accueil_soustitre">L\'app offichielle du Zoo</string>
+    <string name="accueil_infos">
+        Ceci est la version 1 de l\'application Android <b>officielle</b> du zoo de Labége,
+        accescible dans le 76000m<small><sup>2</sup></small> .
+        \n En cas de probléme, contac:
+        \n tel. 0712345678
+        \n e-mail: secretariat@ldnr.fr
+    </string>
 </resources>

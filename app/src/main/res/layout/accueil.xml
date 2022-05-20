@@ -8,13 +8,14 @@
         android:id="@+id/accueil_soustitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="@string/accueil_soustitre" />
 
     <TextView
         android:id="@+id/accueil_infos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="@string/accueil_infos"
+        android:autoLink="all"/>
 
     <TextView
         android:id="@+id/accueil_nouvelles"

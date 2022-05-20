@@ -12,4 +12,11 @@
         <item quantity="one">secunda</item>
         <item quantity="other">secunde</item>
     </plurals>
+    <string name="accueil_soustitre">Aplicatia oficiala Zoo</string>
+    <string name="accueil_infos">
+        Aceasta este prima versioune de Android ZOO Labege.
+        \n La necesitate contactati:
+        \n tel. 0712345678.
+        \n e-mail: secretariat@ldnr.fr
+    </string>
 </resources>

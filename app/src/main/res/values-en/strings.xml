@@ -12,4 +12,11 @@
         <item quantity="one">second</item>
         <item quantity="other">seconds</item>
     </plurals>
+    <string name="accueil_soustitre">Offitial app of Zoo</string>
+    <string name="accueil_infos">
+        THis is the first version of Android oficial app of Zoo Labege
+        \n If necessary, contac:
+        \n tel. 0712345678.
+        \n e-mail: secretariat@ldnr.fr
+    </string>
 </resources>
