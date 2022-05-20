@@ -24,4 +24,5 @@
         \n tel. 0712345678
         \n e-mail: secretariat@ldnr.fr
     </string>
+    <string name="stub" translatable="false">*******</string>
 </resources>
