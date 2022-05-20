@@ -26,16 +26,21 @@ public class AccueilActivity extends Activity {
 
     private void afficheNouvelle() {
         try {
+            //Recuperatuin en inputstream
             InputStream is = getAssets().open("nouvelles.txt");
             //Reader r = new InputStreamReader(is, Charset.forName("UTF-8"));
+
+            //Convertion Input stream en Reader
             Reader r = new InputStreamReader(is, StandardCharsets.UTF_8);
+            //flux text en buffer
             BufferedReader br = new BufferedReader(r);
             String ligne, tout = "";
             while ( (ligne = br.readLine()) != null)
+                //recuperation tous les lignes
                 tout += ligne + "\n";
             Log.i("AccueilActivity", "Nouvelles : " +tout);
             is.close();
-
+            //récupérer l'objet et écrire dedans
             TextView tvNouvelles = findViewById((R.id.accueil_nouvelles));
             tvNouvelles.setText(tout);
 
