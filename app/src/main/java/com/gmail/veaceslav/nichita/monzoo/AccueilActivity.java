@@ -28,6 +28,19 @@ public class AccueilActivity extends Activity implements View.OnClickListener {
         Button btCarte = findViewById(R.id.accueil_bt_carte);
         btCarte.setOnClickListener(this);
 
+        Button btAquarium = findViewById(R.id.accueil_bt_aquarium);
+        //classe anonime OnClickListener
+        btAquarium.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //afficher l'aquarium
+                //ouvrir l'activité de la aquarium:
+                //AccueilActivity.this et pas this du class curent OnClickListener
+                Intent i = new Intent(AccueilActivity.this, AquariumActivity.class);
+                Log.i("AccueilActivity", "onClick aquarium fini");
+                startActivity(i);
+            }
+        });
 
         Log.i("AccueilActivity", "onCreate fini");
     }
@@ -63,7 +76,7 @@ public class AccueilActivity extends Activity implements View.OnClickListener {
         //la intenstion
         // pour aller vers Carte
         Intent i = new Intent(this, CarteActivity.class);
-        Log.i("AccueilActivity", "onClick fini");
-        startActivityForResult(i, 0);
+        Log.i("AccueilActivity", "onClick carte fini");
+        startActivity(i);
     }
 }
