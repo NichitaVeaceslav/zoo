@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name" translatable="false">MonZoo</string>
     <string name="app_banner" translatable="false">Banner</string>
-    <string name="carte_titre" >Carte du Zoo</string>
-    <string name="carte_bonjour" >Bonjour!</string>
-    <string name="aquarium_titre" >Carte de l\'Aquarium</string>
-    <string name="popcorn_titre" >Popcorn</string>
-    <string name="popcorn_message" >"Pas de popcorn pour les %3$s (%1$d %2$s)"</string>
+    <string name="carte_titre">Carte du Zoo</string>
+    <string name="carte_bonjour">Bonjour!</string>
+    <string name="aquarium_titre">Carte de l\'Aquarium</string>
+    <string name="popcorn_titre">Popcorn</string>
+    <string name="popcorn_message">"Pas de popcorn pour les %3$s (%1$d %2$s)"</string>
     <string-array name="poissons">
         <item>saumons</item>
         <item>doradas</item>
         <item>barracudas</item>
     </string-array>
-    
+
     <plurals name="popcorn_second">
         <item quantity="one">seconde</item>
         <item quantity="other">secondes</item>
