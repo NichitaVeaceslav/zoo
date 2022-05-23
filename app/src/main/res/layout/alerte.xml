@@ -48,9 +48,11 @@
         android:id="@+id/alerte_et_infos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text=""
 
-        android:inputType="textCapSentences"
-        android:text="" />
+        android:layout_weight="5"
+        android:inputType="textCapSentences|textMultiLine"
+        android:gravity="start|top"/>
 
     <CheckBox
         android:id="@+id/alerte_cb_urgent"
