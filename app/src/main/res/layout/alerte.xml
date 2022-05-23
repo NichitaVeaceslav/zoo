@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:inputType="textPersonName"
+        android:inputType="textCapWords"
         android:text="" />
 
     <TextView
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:inputType="textPersonName"
+        android:inputType="textCapSentences"
         android:text="" />
 
     <TextView
@@ -42,8 +42,8 @@
         android:id="@+id/alerte_et_infos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-     
-        android:inputType="textPersonName"
+
+        android:inputType="textCapSentences"
         android:text="" />
 
     <CheckBox
@@ -56,6 +56,7 @@
         android:id="@+id/alerte_bt_envoi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/alerte_bt_envoi" />
+        android:text="@string/alerte_bt_envoi"
+        android:onClick="envoi"/>
 
 </LinearLayout>

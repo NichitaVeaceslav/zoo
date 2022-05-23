@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -22,6 +24,14 @@ public class AlerteActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alerte);
+
+    }
+
+    public void envoi(View v){
+        EditText etTitre = findViewById(R.id.alerte_et_titre);
+        //récupérer l'info remplir par utilisateur
+        String message = "Envoyé (" + etTitre.getText() + ")";
+        Toast.makeText(this,message,Toast.LENGTH_LONG).show();
     }
 
 }
