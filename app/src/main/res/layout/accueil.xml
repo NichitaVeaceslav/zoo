@@ -30,8 +30,8 @@
         android:text="@string/carte_titre" />
 
     <Button
-        android:id="@+id/accueil_bt_aquarium"
+        android:id="@+id/accueil_bt_alerte"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/aquarium_titre" />
+        android:text="@string/alerte_titre" />
 </LinearLayout>

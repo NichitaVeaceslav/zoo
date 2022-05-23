@@ -25,4 +25,5 @@
         \n e-mail: secretariat@ldnr.fr
     </string>
     <string name="stub" translatable="false">*******</string>
+    <string name="alerte_titre">Alerte</string>
 </resources>

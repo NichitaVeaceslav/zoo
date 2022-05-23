@@ -30,6 +30,9 @@
         <activity
             android:name=".PopcornActivity"
             android:label="@string/popcorn_titre" />
+        <activity
+            android:name=".AlerteActivity"
+            android:label="@string/alerte_titre" />
 
     </application>
 
