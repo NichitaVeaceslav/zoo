@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/accueil_soustitre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/accueil_soustitre"
-        android:gravity="center"
         android:background="#095B00"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/accueil_soustitre"
         android:textColor="#BF3"
-        android:textStyle="bold"
         android:textSize="25sp"
-        android:padding="15dp"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/accueil_infos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autoLink="all"
         android:text="@string/accueil_infos"
-        android:autoLink="all"/>
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/accueil_nouvelles"
@@ -60,4 +65,79 @@
         android:layout_weight="1"/>
 </LinearLayout>
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2"
+        android:shrinkColumns="0,1"
+        android:layout_margin="15dp">
+        <TableRow android:background="#96FFB9">
+            <TextView android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Nom"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Rôle"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Téléphone"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bob"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nettoyage"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="phone"
+                android:text="0745234567"/>
+        </TableRow>
+        <TableRow android:background="#DDD">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tom"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conducteur"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="phone"
+                android:text="0745211111"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jane"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comptable"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="phone"
+                android:text="0745222222"/>
+        </TableRow>
+        <TableRow android:background="#DDD">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ann"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Animation"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="phone"
+                android:text="0723343222"/>
+        </TableRow>
+    </TableLayout>
+
 </LinearLayout>
+</ScrollView>
