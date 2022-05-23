@@ -47,7 +47,7 @@
     <EditText
         android:id="@+id/alerte_et_infos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text=""
 
         android:layout_weight="5"
