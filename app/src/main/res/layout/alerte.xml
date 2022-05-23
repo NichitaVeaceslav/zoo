@@ -24,11 +24,17 @@
         android:layout_height="wrap_content"
         android:text="@string/alerte_tv_lieu" />
 
-    <EditText
+    <!--<EditText
         android:id="@+id/alerte_et_lieu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:inputType="textCapSentences"
+        android:text="" />
+-->
+    <AutoCompleteTextView
+        android:id="@+id/alerte_et_lieu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textCapSentences"
         android:text="" />
 

@@ -31,4 +31,14 @@
     <string name="alerte_tv_infos">Informations</string>
     <string name="alerte_cb_urgent">Urgent</string>
     <string name="alerte_bt_envoi">Envoyer</string>
+
+    <string-array name="alerte_lieux" translatable="false">
+        <item>Enclos de singes</item>
+        <item>Enclos de tigres</item>
+        <item>Voliére</item>
+        <item>Buvette</item>
+        <item>Aquarium</item>
+        <item>Aquaparc</item>
+    </string-array>
+
 </resources>
