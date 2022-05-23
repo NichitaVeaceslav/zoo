@@ -20,4 +20,9 @@
         \n e-mail: secretariat@ldnr.fr
     </string>
     <string name="alerte_titre">Atentie</string>
+    <string name="alerte_tv_titre">Titlu</string>
+    <string name="alerte_tv_lieu">Loc</string>
+    <string name="alerte_tv_infos">Informatie</string>
+    <string name="alerte_cb_urgent">Urgent</string>
+    <string name="alerte_bt_envoi">Trimite</string>
 </resources>

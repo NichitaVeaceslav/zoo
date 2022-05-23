@@ -5,57 +5,57 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/alerte_tv_titre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Titre" />
+        android:text="@string/alerte_tv_titre" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/alerte_et_titre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+
         android:inputType="textPersonName"
         android:text="" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/alerte_tv_lieu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lieu" />
+        android:text="@string/alerte_tv_lieu" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/alerte_et_lieu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+
         android:inputType="textPersonName"
         android:text="" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/alerte_tv_infos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Informations" />
+        android:text="@string/alerte_tv_infos" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/alerte_et_infos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+     
         android:inputType="textPersonName"
         android:text="" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/alerte_cb_urgent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Urgent" />
+        android:text="@string/alerte_cb_urgent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/alerte_bt_envoi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Envoyer" />
+        android:text="@string/alerte_bt_envoi" />
 
 </LinearLayout>

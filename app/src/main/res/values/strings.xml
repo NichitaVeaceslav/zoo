@@ -26,4 +26,9 @@
     </string>
     <string name="stub" translatable="false">*******</string>
     <string name="alerte_titre">Alerte</string>
+    <string name="alerte_tv_titre">Titre</string>
+    <string name="alerte_tv_lieu">Lieu</string>
+    <string name="alerte_tv_infos">Informations</string>
+    <string name="alerte_cb_urgent">Urgent</string>
+    <string name="alerte_bt_envoi">Envoyer</string>
 </resources>
