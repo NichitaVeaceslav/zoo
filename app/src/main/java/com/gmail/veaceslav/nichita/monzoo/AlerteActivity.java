@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.Checkable;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -32,7 +33,7 @@ public class AlerteActivity extends Activity {
         EditText etTitre = findViewById(R.id.alerte_et_titre);
         //récupérer l'info remplir par utilisateur
         String message = "Envoyé (" + etTitre.getText() + ")";
-        Checkable cbUrgent = findViewById(R.id.alerte_cb_urgent);
+        CheckBox cbUrgent = findViewById(R.id.alerte_cb_urgent);
         if (cbUrgent.isChecked()) message += "!!!";
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
