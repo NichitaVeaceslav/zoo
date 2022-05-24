@@ -28,4 +28,7 @@
 
     <string name="alerte_confirmer_titre">Confirm</string>
     <string name="alerte_confirmer_text">Trimite alerta</string>
+
+    <string name="accueil_menu_option">Optiuni</string>
+    <string name="accueil_menu_enregister">Salveaza</string>
 </resources>

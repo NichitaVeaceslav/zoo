@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.io.BufferedReader;
@@ -77,5 +80,27 @@ public class AccueilActivity extends Activity implements View.OnClickListener {
         Intent i = new Intent(this, CarteActivity.class);
         Log.i("AccueilActivity", "onClick carte fini");
         startActivity(i);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //chercher notre menu
+        getMenuInflater().inflate(R.menu.accueil, menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onMenuItemSelected(int featureId, @NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_carte:
+                //ouvrir la carte
+                Intent i = new Intent(this, CarteActivity.class);
+                startActivity(i);
+                break;
+            case R.id.menu_enregistrer:
+                 item.setChecked(! item.isChecked() );
+                break;
+        }
+        return true;
     }
 }

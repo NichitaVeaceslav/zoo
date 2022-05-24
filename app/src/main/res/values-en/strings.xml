@@ -28,4 +28,7 @@
 
     <string name="alerte_confirmer_titre">Configrm</string>
     <string name="alerte_confirmer_text">Send alert</string>
+
+    <string name="accueil_menu_option">Options</string>
+    <string name="accueil_menu_enregister">Save</string>
 </resources>

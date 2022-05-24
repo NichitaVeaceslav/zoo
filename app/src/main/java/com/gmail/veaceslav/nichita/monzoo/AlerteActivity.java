@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -61,5 +62,6 @@ public class AlerteActivity extends Activity {
         if (cbUrgent.isChecked()) message += "!!!";
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
+
 
 }
