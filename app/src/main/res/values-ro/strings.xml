@@ -25,4 +25,7 @@
     <string name="alerte_tv_infos">Informatie</string>
     <string name="alerte_cb_urgent">Urgent</string>
     <string name="alerte_bt_envoi">Trimite</string>
+
+    <string name="alerte_confirmer_titre">Confirm</string>
+    <string name="alerte_confirmer_text">Trimite alerta</string>
 </resources>

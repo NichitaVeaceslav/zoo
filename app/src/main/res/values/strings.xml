@@ -40,5 +40,6 @@
         <item>Aquaparc</item>
     </string-array>
 
-
+    <string name="alerte_confirmer_titre">Confirmation</string>
+    <string name="alerte_confirmer_text">Voulez-vous envoyer cette alert?</string>
 </resources>

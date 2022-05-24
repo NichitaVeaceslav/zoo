@@ -1,6 +1,8 @@
 package com.gmail.veaceslav.nichita.monzoo;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,6 +39,21 @@ public class AlerteActivity extends Activity {
     }
 
     public void envoi(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.alerte_confirmer_titre);
+        builder.setMessage(R.string.alerte_confirmer_text);
+        builder.setIcon(android.R.drawable.ic_input_get);
+        //avec f-tion anonime
+        builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                confirmer();
+            }
+        });
+        builder.setNegativeButton(android.R.string.no,null);
+        builder.show();
+    }
+    private void confirmer(){
         EditText etTitre = findViewById(R.id.alerte_et_titre);
         //récupérer l'info remplir par utilisateur
         String message = "Envoyé (" + etTitre.getText() + ")";

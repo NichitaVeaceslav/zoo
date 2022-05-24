@@ -9,6 +9,6 @@
     </style>
     <style name="alerte">
         <item name="android:textColor">#820</item>
-        <item name="android:background">#F31</item>
+        <item name="android:background">#FFC95E</item>
     </style>
 </resources>
