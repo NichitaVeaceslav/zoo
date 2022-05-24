@@ -2,6 +2,7 @@ package com.gmail.veaceslav.nichita.monzoo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -85,10 +86,11 @@ public class AccueilActivity extends Activity implements View.OnClickListener {
     public boolean onCreateOptionsMenu(Menu menu) {
         //chercher notre menu
         getMenuInflater().inflate(R.menu.accueil, menu);
+        SharedPreferences sp = getSharedPreferences("zoo", MODE_PRIVATE);
+        MenuItem miEnregister = menu.findItem(R.id.menu_enregistrer);
+        miEnregister.setChecked(sp.getBoolean("enregister", true));
         return true;
-
     }
-
     @Override
     public boolean onMenuItemSelected(int featureId, @NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -98,7 +100,19 @@ public class AccueilActivity extends Activity implements View.OnClickListener {
                 startActivity(i);
                 break;
             case R.id.menu_enregistrer:
-                 item.setChecked(! item.isChecked() );
+                 item.setChecked( ! item.isChecked() );
+                //enregister l'information   //recuperer un object sharedPreferences
+                SharedPreferences sp = getSharedPreferences("zoo", MODE_PRIVATE );
+                //zoo - nom fichier pour sauvgarder
+                //pour faire des modifications on utiliz un Editor(modifier les données)
+                SharedPreferences.Editor e = sp.edit();
+                //sauvgarder pour utilisateur, ajout d'une donnée
+                e.putBoolean("enregister", item.isChecked());
+                //declancher l'enregistrement
+                e.commit();
+                //ovrir file Interne
+                //openFileInput();
+                // openFileOutput()
                 break;
         }
         return true;

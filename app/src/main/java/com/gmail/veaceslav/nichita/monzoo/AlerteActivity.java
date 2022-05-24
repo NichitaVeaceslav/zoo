@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -56,9 +58,24 @@ public class AlerteActivity extends Activity {
     }
     private void confirmer(){
         EditText etTitre = findViewById(R.id.alerte_et_titre);
+        EditText etLieu= findViewById(R.id.alerte_et_lieu);
+        EditText etInfos = findViewById(R.id.alerte_et_infos);
+        CheckBox cbUrgent = findViewById(R.id.alerte_cb_urgent);
         //récupérer l'info remplir par utilisateur
         String message = "Envoyé (" + etTitre.getText() + ")";
-        CheckBox cbUrgent = findViewById(R.id.alerte_cb_urgent);
+        SharedPreferences sp = getSharedPreferences("zoo", MODE_PRIVATE );
+
+        if (sp.getBoolean("enregister", true)){//SI LA case Enregister du menu est coshée
+//enregister dans la base
+            try{
+                Log.i("AlerteActivity", "Eregistrement BD ok");
+            }catch (Exception e){
+                Log.e("AlerteActivity", "Eregistrement BD ", e);
+            }
+
+        }
+
+
         if (cbUrgent.isChecked()) message += "!!!";
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
