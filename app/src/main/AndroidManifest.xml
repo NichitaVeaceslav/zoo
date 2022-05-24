@@ -32,7 +32,8 @@
             android:label="@string/popcorn_titre" />
         <activity
             android:name=".AlerteActivity"
-            android:label="@string/alerte_titre" />
+            android:label="@string/alerte_titre"
+            android:theme="@style/alerte"/>
 
     </application>
 

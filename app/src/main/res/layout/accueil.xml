@@ -79,14 +79,14 @@
                 android:text="Nom"/>
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:text="Rôle"/>
+                android:text="Rôle"
+                style="@style/entete"/>
+
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:text="Téléphone"/>
+                android:autoLink="phone"
+                android:text="Téléphone"
+                style="@style/entete_lien"/>
         </TableRow>
 
         <TableRow>
