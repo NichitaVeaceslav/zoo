@@ -68,14 +68,18 @@ public class AlerteActivity extends Activity {
         if (sp.getBoolean("enregister", true)){//SI LA case Enregister du menu est coshée
 //enregister dans la base
             try{
+                String titre = etTitre.getText().toString();
+                String lieu = etLieu.getText().toString();
+                String infos = etInfos.getText().toString();
+                boolean urgent = cbUrgent.isChecked();
+                ZooDBHelper z = new ZooDBHelper(this);
+
+                z.ajouterAlerte(titre, lieu, infos, urgent );
                 Log.i("AlerteActivity", "Eregistrement BD ok");
             }catch (Exception e){
                 Log.e("AlerteActivity", "Eregistrement BD ", e);
             }
-
         }
-
-
         if (cbUrgent.isChecked()) message += "!!!";
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
